@@ -1,8 +1,8 @@
 from bottle import default_app, get, run
 
-@get("/")
-def _():
-    return "ok"
+
+
+import signup_get
 
 
 
