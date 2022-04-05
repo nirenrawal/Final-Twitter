@@ -1,8 +1,15 @@
-from bottle import default_app, get, run
+from bottle import default_app, get, run, static_file
 
 
 
 import signup_get
+
+#############################################
+@get("/app.css")
+def _():
+    return static_file("app.css", root=".")
+
+#############################################
 
 
 
