@@ -3,6 +3,7 @@ from bottle import default_app, get, run, static_file
 
 
 import signup_get
+import home_get
 
 #############################################
 @get("/app.css")
