@@ -7,6 +7,14 @@ import tweets_get_by_id
 import tweets_update_by_id
 import tweets_delete_by_id
 import tweets_post
+######################################
+
+import users_post
+import users_get_all
+import users_get_by_id
+import users_delete_by_id
+
+######################################
 
 import signup_get
 import home_get

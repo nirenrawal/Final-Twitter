@@ -1,16 +1,14 @@
-from bottle import delete
+from bottle import get
 import g
 
 ##############################
-@delete("/tweets/<tweet_id>")
-@delete("/<language>/tweets/<tweet_id>")
-def _(language = "en", tweet_id = ""):
+@get("/users/<user_id>")
+@get("/<language>/users/<user_id>")
+def _(language = "en", user_id = ""):
   try:
-    # Maybe the user enters a language that is not supported, then default to english
     # Use any key to see if the language is in the errors dictionary
     if f"{language}_server_error" not in g._errors : language = "en"
-    
-    tweet_id, error = g._is_uuid4(tweet_id, language)
+    user_id, error = g._is_uuid4(user_id, language)
     if error : return g._send(400, error)
   except Exception as ex:
     print(ex)
@@ -18,10 +16,9 @@ def _(language = "en", tweet_id = ""):
 
   try:
     db = g._db_connect("database.sqlite")
-    counter = db.execute("DELETE FROM tweets WHERE tweet_id = ?", (tweet_id,)).rowcount
-    db.commit()
-    if not counter : return g._send(204, "")
-    return {"info":"Tweet successfully deleted"}
+    user = db.execute("SELECT * FROM users WHERE user_id = ?", (user_id,)).fetchone()
+    if not user: return g._send(204, "")
+    return user
   except Exception as ex:
     print(ex)
     return g._send(500, g._errors[f"{language}_server_error"])
