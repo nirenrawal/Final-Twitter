@@ -29,8 +29,12 @@ window.addEventListener(
 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 )
 =======
 )
 
 >>>>>>> login-backend
+=======
+
+>>>>>>> 4adb892f93db09cea01c9682603ff9f9bbc35cb1
