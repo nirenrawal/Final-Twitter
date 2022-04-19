@@ -1,7 +1,13 @@
 from bottle import post, request, redirect
 import uuid
+<<<<<<< HEAD
 
 users = []
+=======
+import niren
+
+
+>>>>>>> login-backend
 
 
 @post("/signup")
@@ -21,5 +27,9 @@ def _():
         "username": user_name,
         "user_password": user_password
     }
+<<<<<<< HEAD
     users.append(user)
+=======
+    niren.USERS.append(user)
+>>>>>>> login-backend
     return redirect(f"/signup-get?id={user_id}&first_name={user_first_name}&last_name={user_last_name}&email={user_email}&username={user_name}&user_password={user_password}")
