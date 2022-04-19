@@ -1,13 +1,7 @@
 from bottle import default_app, get, run, static_file, post ,request, response
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 import login_post
-=======
->>>>>>> 4adb892f93db09cea01c9682603ff9f9bbc35cb1
 
 import tweets_get_all
 import tweets_get_by_id
@@ -23,13 +17,8 @@ import users_delete_by_id
 
 ######################################
 
-<<<<<<< HEAD
-=======
-import login_post
->>>>>>> login-backend
-=======
 
->>>>>>> 4adb892f93db09cea01c9682603ff9f9bbc35cb1
+import login_post
 import signup_get
 import home_get
 import signup_post
