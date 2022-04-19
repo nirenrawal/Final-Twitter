@@ -1112,6 +1112,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
 
 .pt-6 {
   padding-top: 1.5rem;
