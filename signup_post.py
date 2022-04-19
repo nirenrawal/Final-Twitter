@@ -1,7 +1,12 @@
 from bottle import post, request, redirect
 import uuid
+
 import niren
 
+
+
+
+users = []
 
 
 
@@ -22,5 +27,9 @@ def _():
         "username": user_name,
         "user_password": user_password
     }
+
     niren.USERS.append(user)
+
+    users.append(user)
+
     return redirect(f"/signup-get?id={user_id}&first_name={user_first_name}&last_name={user_last_name}&email={user_email}&username={user_name}&user_password={user_password}")
