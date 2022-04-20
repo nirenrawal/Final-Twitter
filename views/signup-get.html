@@ -4,34 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../app.css">
     <title>Document</title>
 </head>
-<body>
-    user id = {{user_id}} <br>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    user full name = {{user_first_name}} {{user_last_name}} <br>
-    email = {{user_email}} <br>
-    password = {{user_password}} <br>
-=======
-=======
-
->>>>>>> 4adb892f93db09cea01c9682603ff9f9bbc35cb1
-    <p>user full name = {{user_first_name}} {{user_last_name}}</p> <br>
-    email = {{user_email}} <br>
-    password = {{user_password}} <br>
-    <p>@{{user_name}}</p>
-
-    <h1>Welcome</h1>
-    <h2>@{{user_name}}</h2>
-<<<<<<< HEAD
->>>>>>> login-backend
-=======
-
-    user full name = {{user_first_name}} {{user_last_name}} <br>
-    email = {{user_email}} <br>
-    password = {{user_password}} <br>
-
->>>>>>> 4adb892f93db09cea01c9682603ff9f9bbc35cb1
+<body class="m-4 bg-blue-100">
+    <table class="table-fixed border-collapse border border-slate-500">
+        <thead>
+            <tr>
+                <th class="py-2 px-4 border border-slate-300">User Id</th>
+                <th class="py-2 px-4 border border-slate-300">First Name</th>
+                <th class="py-2 px-4 border border-slate-300">Last Name</th>
+                <th class="py-2 px-4 border border-slate-300">Email</th>
+                <th class="py-2 px-4 border border-slate-300">User Name</th>
+                <th class="py-2 px-4 border border-slate-300">Password</th>
+                <th class="py-2 px-4 border border-slate-300"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="py-2 px-4 border border-slate-300">{{user_id}}</td>
+                <td class="py-2 px-4 border border-slate-300">{{user_first_name}}</td>
+                <td class="py-2 px-4 border border-slate-300">{{user_last_name}}</td>
+                <td class="py-2 px-4 border border-slate-300">{{user_email}}</td>
+                <td class="py-2 px-4 border border-slate-300">{{user_name}}</td>
+                <td class="py-2 px-4 border border-slate-300">{{user_password}}</td>
+                <td class="py-2 px-4 border border-slate-300"><button class="py-1 px-3 bg-red-700 text-white font-bold rounded-2xl hover:bg-red-400">Delete</button></td>
+            </tr>
+        </tbody>
+        <tbody>
+            <th></th>
+        </tbody>
+    </table>
 </body>
 </html>
